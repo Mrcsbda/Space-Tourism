@@ -16,9 +16,9 @@ const Router = () => {
                 <Routes>
                     <Route path="/" element={<Layout />} >
                         <Route index element={<Home />} />
-                        <Route path="/destination:destinationName" element={<Destination />} />
-                        <Route path="/crew:crewName" element={<Crew />} />
-                        <Route path="/technology:technology" element={<Technology />} />
+                        <Route path="destination/:destinationName" element={<Destination />} />
+                        <Route path="crew/:crewName" element={<Crew />} />
+                        <Route path="technology/:technologyName" element={<Technology />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
