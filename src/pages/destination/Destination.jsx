@@ -6,18 +6,18 @@ import { filterDestination } from '../../services/destination'
 const Destination = () => {
   const { destinationName } = useParams()
   const [destination, setDestination] = useState({})
+
   useEffect(() => {
     setDestination(filterDestination(destinationName))
-    console.log(destination)
   }, [destinationName])
 
   return (
     <>
       {
         destination?.name && (
-          <section>
-            <h2><span>01</span> PICK YOUR DESTINATION</h2>
-            <img src={destination.images.png} alt="" />
+          <section className='destination-container'>
+            <h2 className='destination__subtitle'><span>01</span> PICK YOUR DESTINATION</h2>
+            <img className='destination__image' src={destination.images.png} alt={destination.name} />
             <div>
               <nav>
                 <li>
