@@ -30,10 +30,10 @@ const Layout = () => {
     }
 
     return (
-        <div className={`layout ${styleBackground}`}>
+        <article className={`layout ${styleBackground}`}>
             <Header />
             <Outlet />
-        </div>
+        </article>
     )
 }
 
