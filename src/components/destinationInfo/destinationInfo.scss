@@ -15,11 +15,34 @@
         font-family: $barlow-font;
         font-weight: 400;
         line-height: 25px;
-        padding-bottom: 2rem
+        padding-bottom: 1.5rem
     }
 
     &__separate-line {
         border: 1px solid #383B4B;
-        margin: 0 1rem;
+        margin: 0 1rem 1.5rem 1rem;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+    }
+
+    &__distance, &__travel {
+        &--title {
+            font-size: 14px;
+            font-family: $barlow-condensed-font;
+            letter-spacing: 2.36px;
+            font-weight: 400;
+            color: $periwinkle;
+            margin-bottom: 0.5rem;
+        }
+
+        &--text {
+            font-size: 28px;
+            color: white;
+            font-family: $bellefair-font;
+        }
     }
 }
