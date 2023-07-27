@@ -9,12 +9,13 @@ const Destination = () => {
   const navigate = useNavigate()
   const { destinationName } = useParams()
   const [destination, setDestination] = useState({})
-  const { destinationPathName, setDestinationPathName } = useContext(AppContext)
+  const { setDestinationPathName } = useContext(AppContext)
   const destinations = ["Moon", "Mars", "Europa", "Titan"]
 
   useEffect(() => {
+    setDestinationPathName(destinationName)
     setDestination(filterDestination(destinationName))
-  }, [destinationPathName])
+  }, [destinationName])
 
   const handleDestination = (destination) => {
     setDestinationPathName(destination)
@@ -35,7 +36,7 @@ const Destination = () => {
                     {
                       destinations.map((element, index) => (
                         <li
-                        className={`destination__nav__list--item ${destinationPathName === element && "active-destination"}`}
+                        className={`destination__nav__list--item ${destinationName === element && "active-destination"}`}
                         key={index + 1}
                         onClick={()=> handleDestination(element)}
                         >{element}</li>

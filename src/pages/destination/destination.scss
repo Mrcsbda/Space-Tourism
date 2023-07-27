@@ -8,6 +8,7 @@
         text-align: center;
         font-family: $barlow-condensed-font;
         padding: 1rem;
+        font-size: 16px;
         color: white;
         font-weight: 400;
         margin-bottom: 1rem;
@@ -16,7 +17,7 @@
         span {
             opacity: 25%;
             font-weight: 700;
-            margin-right: 0.5rem;
+            margin-right: 0.3rem;
         }
     }
 
@@ -67,6 +68,7 @@
             margin-left: 38.5px;
             margin-bottom: 1.5rem;
             letter-spacing: 3.38px;
+            font-size: 20px;
         }
 
         &__image {
@@ -90,7 +92,7 @@
 }
 
 
-.active-destination {
+.active-destination, .active {
     color: white;
     position: relative;
 
