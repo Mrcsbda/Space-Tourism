@@ -1,6 +1,7 @@
 import React from 'react'
 import "./destinationInfo.scss"
 
+
 const DestinationInfo = ({ destination }) => {
     return (
         <div className='destination__info'>
