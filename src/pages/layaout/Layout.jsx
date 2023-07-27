@@ -15,25 +15,25 @@ const Layout = () => {
     const changeBackground = () => {
         switch (true) {
             case location.pathname.includes("destination"):
-                setStyleBackgrund("destination")
+                setStyleBackgrund("destination-background")
                 break;
             case location.pathname.includes("crew"):
-                setStyleBackgrund("crew")
+                setStyleBackgrund("crew-background")
                 break;
             case location.pathname.includes("technology"):
-                setStyleBackgrund("technology")
+                setStyleBackgrund("technology-background")
                 break;
             default:
-                setStyleBackgrund("home")
+                setStyleBackgrund("home-background")
                 break;
         }
     }
 
     return (
-        <div className={`layout ${styleBackground}`}>
+        <article className={`layout ${styleBackground}`}>
             <Header />
             <Outlet />
-        </div>
+        </article>
     )
 }
 
