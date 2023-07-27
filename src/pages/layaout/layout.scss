@@ -1,5 +1,9 @@
 @import "../../assets/styles/reset.scss";
 
+.layout {
+    min-height: 100vh;
+    max-height: 100%;
+}
 .destination {
     background-color: red;
 }

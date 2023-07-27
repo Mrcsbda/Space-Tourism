@@ -23,16 +23,14 @@ const Layout = () => {
             case location.pathname.includes("technology"):
                 setStyleBackgrund("technology")
                 break;
-            case location.pathname === "/":
+            default:
                 setStyleBackgrund("home")
-                break
-            default: ""
                 break;
         }
     }
 
     return (
-        <div className={styleBackground}>
+        <div className={`layout ${styleBackground}`}>
             <Header />
             <Outlet />
         </div>
