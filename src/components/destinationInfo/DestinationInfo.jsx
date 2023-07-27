@@ -1,18 +1,18 @@
 import React from 'react'
 
-const DestinationInfo = () => {
+const DestinationInfo = ({ destination }) => {
     return (
         <div>
-            <h1></h1>
-            <p></p>
+            <h1>{destination.name}</h1>
+            <p>{destination.description}</p>
             <div>
                 <div>
-                    <h3></h3>
-                    <p></p>
+                    <h3>AVG. DISTANCE</h3>
+                    <p>{destination.distance}</p>
                 </div>
                 <div>
-                    <h3></h3>
-                    <p></p>
+                    <h3>EST. TRAVEL TIME</h3>
+                    <p>{destination.travel}</p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-export const destinations = [
+const destinations = [
     {
         name: "Moon",
         images: {
@@ -40,3 +40,7 @@ export const destinations = [
         travel: "7 years"
     }
 ]
+
+export const filterDestination = (destination) => {
+    return destinations.find(element => element.name === destination)
+}
