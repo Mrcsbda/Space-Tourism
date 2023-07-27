@@ -10,26 +10,28 @@
     }
 
     &__description {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
         color: $periwinkle;
         font-family: $barlow-font;
         font-weight: 400;
         line-height: 25px;
-        padding-bottom: 1.5rem
+        padding-bottom: 2rem
     }
 
     &__separate-line {
         border: 1px solid #383B4B;
-        margin: 0 1rem 1.5rem 1rem;
+        margin: 0 1.5rem 1.5rem 1.5rem;
     }
 
-    &__info{
+    &__info {
         display: flex;
         flex-direction: column;
         gap: 1.3rem;
+        margin-bottom: 4rem;
     }
 
-    &__distance, &__travel {
+    &__distance,
+    &__travel {
         &--title {
             font-size: 14px;
             font-family: $barlow-condensed-font;
@@ -43,6 +45,37 @@
             font-size: 28px;
             color: white;
             font-family: $bellefair-font;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .destination {
+        &__title {
+            font-size: 80px;
+        }
+
+        &__description {
+            padding: 0 6.063rem;
+            line-height: 28px;
+            padding-bottom: 2rem
+        }
+
+        &__separate-line {
+            margin: 0 6.063rem 2rem 6.063rem;
+        }
+
+        &__info {
+            flex-direction: row;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        &__distance,
+        &__travel {
+            &--title {
+                margin-bottom: 0.7rem;
+            }
         }
     }
 }
