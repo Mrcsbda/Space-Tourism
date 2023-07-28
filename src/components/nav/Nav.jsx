@@ -13,28 +13,28 @@ const Nav = ({ handleMenuToggle }) => {
                     <NavLink
                         to="/"
                         className='nav__item--nav-link'
-                        onClick={handleMenuToggle}><span>01</span> HOME</NavLink>
+                        onClick={handleMenuToggle}><span>00</span> HOME</NavLink>
                 </li>
                 <li className='nav__item'>
                     <NavLink
                         to={`/destination/${destinationPathName}`}
                         className='nav__item--nav-link'
                         onClick={handleMenuToggle}
-                    > <span>02</span> DESTINATION</NavLink>
+                    > <span>01</span> DESTINATION</NavLink>
                 </li>
                 <li className='nav__item'>
                     <NavLink
                         to={`/crew/${crewPathName}`}
                         className='nav__item--nav-link'
                         onClick={handleMenuToggle}
-                    ><span>03</span> CREW</NavLink>
+                    ><span>02</span> CREW</NavLink>
                 </li>
                 <li className='nav__item'>
                     <NavLink
                         to={`/technology/${technologyPathName}`}
                         className='nav__item--nav-link'
                         onClick={handleMenuToggle}
-                    ><span>04</span> TECHNOLOGY</NavLink>
+                    ><span>03</span> TECHNOLOGY</NavLink>
                 </li>
             </ul>
         </nav>

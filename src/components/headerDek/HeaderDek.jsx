@@ -1,28 +1,39 @@
 import React, { useContext } from 'react'
 import "./headerDek.scss";
 import logo from "../../../public/images/shared/logo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { AppContext } from '../../routes/Router';
 const HeaderDek = () => {
   const { destinationPathName, crewPathName, technologyPathName } = useContext(AppContext)
+  const { destinationName } = useParams()
+  const { crewName } = useParams()
+  const { technologyName } = useParams()
+  const location = useLocation()
   return (
     <div className="dek">
       <figure className="logo">
         <img src={logo} alt="" />
       </figure>
       <nav className='navdek'>
-        <ul>
+        <ul className='navdek__list'>
           <li>
-            <NavLink to="/">01 HOME</NavLink>
+            <NavLink className={location.pathname === "/" && "active-desk"} to="/"><span>00</span>HOME</NavLink>
           </li>
           <li>
-            <NavLink to={`/destination/${destinationPathName}`} > 04 DESTINATION</NavLink>
+            <NavLink
+              className={destinationName === destinationPathName && "active-desk"}
+              to={`/destination/${destinationPathName}`} ><span>01</span>DESTINATION</NavLink>
           </li>
           <li>
-            <NavLink to={`/crew/${crewPathName}`} >03 CREW</NavLink>
+            <NavLink
+              className={crewName === crewPathName && "active-desk"}
+              to={`/crew/${crewPathName}`} ><span>02</span> CREW</NavLink>
           </li>
           <li>
-            <NavLink to={`/technology/${crewPathName}`} >04 TECHNOLOGY</NavLink>
+
+            <NavLink
+              className={technologyName === technologyPathName && "active-desk"}
+              to={`/technology/${technologyPathName}`} ><span>03</span>TECHNOLOGY</NavLink>
           </li>
         </ul>
       </nav>
