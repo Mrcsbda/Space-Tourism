@@ -1,0 +1,63 @@
+@import "/src/assets/styles/variables.scss";
+.dek {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  height: 80px;
+  .logo img {
+    width: 40px;
+    height: 40px;
+    padding-left: 30px;
+    padding-top: 25px;
+    // border-bottom: 2px solid #ffffff;
+  }
+
+  .navdek {
+    display: flex;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 35px;
+      left: -500px;
+      width: 550px;
+      height: 1px;
+      background-color: #ffffff; /* Color de la raya blanca */
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      background-color: $rich-black;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 50px;
+      width: 700px;
+      gap: 20px;
+
+      li {
+        text-align: right;
+        a {
+          text-decoration: none;
+          color: #ffff;
+          padding: 8px 16px;
+          border-radius: 4px;
+          position: relative;
+          &:hover {
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -22px;
+              left: 50%;
+              width: 50%;
+              height: 2px;
+              background-color: #ffffff; /* Color de la raya blanca */
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+    // calc(50% - 20px);
+  }
+}

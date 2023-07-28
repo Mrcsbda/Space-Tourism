@@ -1,9 +1,15 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import './nav.scss'
-const Nav = () => {
-    return (
-        <nav className='nav'>
+import "./headerDek.scss";
+import logo from "../../../public/images/shared/logo.svg";
+import { NavLink } from "react-router-dom";
+const HeaderDek = () => {
+  return (
+    <div className="dek">
+      <figure className="logo">
+        <img src={logo} alt="" />
+      </figure>
+
+      <nav className='navdek'>
             <ul>
                 <li> 
                     <NavLink to="/">01 HOME</NavLink>
@@ -19,7 +25,8 @@ const Nav = () => {
                 </li>
             </ul>
         </nav>
-    )
+        </div>
+  )
 }
 
-export default Nav
+export default HeaderDek

@@ -1,13 +1,30 @@
 @import "/src/assets/styles/variables.scss";
 
 .header {
-  width: 375px;
-  height: 710px;
-  background-color: black;
+  height: max-content;
   padding: 20px;
   &__up {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+    .hamburger {
+      .close {
+        width: 24px;
+        height: 21px;
+        position: relative;
+        z-index: 2;
+      }
+      .menu {
+        width: 24px;
+        height: 21px;
+      }
+    }
   }
+
+
 }
