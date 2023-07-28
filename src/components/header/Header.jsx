@@ -2,9 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import Nav from "../nav/Nav";
 import "./header.scss";
 import "../nav/nav.scss"
-import logo from "../../../public/images/shared/logo.svg";
-import menu from "../../../public/images/shared/icon-hamburger.svg";
-import close from "../../../public/images/shared/icon-close.svg";
 import HeaderTab from "../headerTab/HeaderTab";
 import { useMediaQuery } from "react-responsive";
 import HeaderDek from "../headerDek/HeaderDek";
@@ -43,13 +40,13 @@ const Header = () => {
           {/* <Nav/> */}
           <div className="header__up">
             <figure className="logo">
-              <img src={logo} alt="" />
+              <img src="/images/shared/logo.svg" alt="logo image" />
             </figure>
             <figure className="hamburger" onClick={handleMenuToggle}>
               {isMenuOpen ? (
-                <img className="close" src={close} />
+                <img className="close" src="/images/shared/icon-close.svg" alt="close icon"/>
               ) : (
-                <img className="menu" src={menu} />
+                <img className="menu" src="/images/shared/icon-hamburger.svg" alt="menu icon"/>
               )}
             </figure>
           </div>
