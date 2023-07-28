@@ -3,22 +3,37 @@ import { NavLink } from 'react-router-dom'
 import { AppContext } from '../../routes/Router'
 import './nav.scss'
 
-const Nav = () => {
-    const { destinationPathName } = useContext(AppContext)
+const Nav = ({ handleMenuToggle }) => {
+    const { destinationPathName, crewPathName, technologyPathName } = useContext(AppContext)
     return (
         <nav className='nav'>
-            <ul>
-                <li>
-                    <NavLink to="/">01 HOME</NavLink>
+            <ul className='nav__list'>
+                <li className='nav__item'>
+                    <NavLink
+                        to="/"
+                        className='nav__item--nav-link'
+                        onClick={handleMenuToggle}><span>01</span> HOME</NavLink>
                 </li>
-                <li>
-                    <NavLink to={`/destination/${destinationPathName}`} >Destination</NavLink>
+                <li className='nav__item'>
+                    <NavLink
+                        to={`/destination/${destinationPathName}`}
+                        className='nav__item--nav-link'
+                        onClick={handleMenuToggle}
+                    > <span>02</span> DESTINATION</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/crew/Douglas-Hurley" >03 CREW</NavLink>
+                <li className='nav__item'>
+                    <NavLink
+                        to={`/crew/${crewPathName}`}
+                        className='nav__item--nav-link'
+                        onClick={handleMenuToggle}
+                    ><span>03</span> CREW</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/technology/Launch-vehicle" >04 TECHNOLOGY</NavLink>
+                <li className='nav__item'>
+                    <NavLink
+                        to={`/technology/${crewPathName}`}
+                        className='nav__item--nav-link'
+                        onClick={handleMenuToggle}
+                    ><span>04</span> TECHNOLOGY</NavLink>
                 </li>
             </ul>
         </nav>

@@ -50,7 +50,7 @@ const Header = () => {
               )}
             </figure>
           </div>
-          {isMenuOpen && <Nav className="nav" />}
+          {isMenuOpen && <Nav className="nav" handleMenuToggle={handleMenuToggle} />}
         </header>
       )}
       {isTablet && ( // vista tablet
