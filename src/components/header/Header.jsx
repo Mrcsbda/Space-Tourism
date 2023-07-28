@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Nav from "../nav/Nav";
 import "./header.scss";
 import "../nav/nav.scss"
@@ -8,10 +8,12 @@ import close from "../../../public/images/shared/icon-close.svg";
 import HeaderTab from "../headerTab/HeaderTab";
 import { useMediaQuery } from "react-responsive";
 import HeaderDek from "../headerDek/HeaderDek";
+import { AppContext } from "../../routes/Router";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 480 });
   const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1099 });
+  const { inNavMobile , setInNavMobile } = useContext(AppContext)
 
   useEffect(() => {
     handleResize();
@@ -31,6 +33,7 @@ const Header = () => {
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+    setInNavMobile(!inNavMobile);
   };
 
   return (

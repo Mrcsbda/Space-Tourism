@@ -13,6 +13,7 @@ const Router = () => {
     const [destinationPathName, setDestinationPathName] = useState("Moon")
     const [crewPathName, setCrewPathName] = useState("Douglas-Hurley")
     const [technologyPathName, setTechonologyPathName] = useState("Launch-vehicle")
+    const [inNavMobile, setInNavMobile] = useState(false)
 
     return (
         <AppContext.Provider value={
@@ -22,7 +23,9 @@ const Router = () => {
                 crewPathName,
                 setCrewPathName,
                 technologyPathName,
-                setTechonologyPathName
+                setTechonologyPathName,
+                inNavMobile,
+                setInNavMobile
             }
         }>
             <BrowserRouter>
