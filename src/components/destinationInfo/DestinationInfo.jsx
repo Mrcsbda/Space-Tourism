@@ -4,7 +4,7 @@ import "./destinationInfo.scss"
 
 const DestinationInfo = ({ destination }) => {
     return (
-        <div >
+        <div className='destination__info-container'>
             <h1 className='destination__title'>{(destination.name).toUpperCase()}</h1>
             <p className='destination__description'> {destination.description}</p>
             <hr className='destination__separate-line' />
