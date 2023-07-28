@@ -6,9 +6,7 @@ import { AppContext } from "../../routes/Router";
 
 const HeaderTab = () => {
   const { destinationPathName, crewPathName, technologyPathName } = useContext(AppContext)
-  const { destinationName } = useParams()
-  const { crewName } = useParams()
-  const { technologyName } = useParams()
+  const { destinationName , crewName ,technologyName } = useParams()
   const location = useLocation()
 
   return (
@@ -20,21 +18,21 @@ const HeaderTab = () => {
       <nav className='navtab'>
         <ul>
           <li>
-            <Link className={location.pathname === "/" && "active-tab"} to="/">HOME</Link>
+            <Link className={location.pathname === "/" ? "active-tab" : ""} to="/">HOME</Link>
           </li>
           <li>
             <Link
-              className={destinationName === destinationPathName && "active-tab"}
+              className={destinationName === destinationPathName ? "active-tab" : ""}
               to={`/destination/${destinationPathName}`} >DESTINATION</Link>
           </li>
           <li>
             <Link
-              className={crewName === crewPathName && "active-tab"}
+              className={crewName === crewPathName ? "active-tab" : ""}
               to={`/crew/${crewPathName}`} >CREW</Link>
           </li>
           <li>
             <Link
-              className={technologyName === technologyPathName && "active-tab"}
+              className={technologyName === technologyPathName ? "active-tab" : ""}
               to={`/technology/${technologyPathName}`} >TECHNOLOGY</Link>
           </li>
         </ul>
