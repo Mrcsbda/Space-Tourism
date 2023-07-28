@@ -21,38 +21,31 @@
     align-items: flex-start;
     margin-top: 100px;
     gap: 32px;
+    width: 100%;
   }
 
   &__item {
-    text-align: right;
+    text-align:left;
+    position: relative;
+    width: 100%;
 
     &--nav-link {
       text-decoration: none;
       color: #ffff;
       padding: 0px 32px;
       border-radius: 4px;
-      position: relative;
+
       font-family: $barlow-condensed-font;
       font-weight: 400;
+      width: 100%;
+      display: inline-block;
+
 
       span {
         font-weight: 700;
         margin-right: 10px;
       }
 
-      &:hover {
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 0px;
-          width: 2px;
-          height: 50%;
-          background-color: #ffffff;
-          /* Color de la raya blanca */
-          transform: translateY(-50%);
-        }
-      }
     }
   }
 }
@@ -67,4 +60,16 @@
   .nav {
     width: 40%;
   }
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 3px;
+  height: 100%;
+  background-color: #ffffff;
+  /* Color de la raya blanca */
+  transform: translateY(-50%);
 }
