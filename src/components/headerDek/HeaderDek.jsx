@@ -5,10 +5,9 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { AppContext } from '../../routes/Router';
 const HeaderDek = () => {
   const { destinationPathName, crewPathName, technologyPathName } = useContext(AppContext)
-  const { destinationName } = useParams()
-  const { crewName } = useParams()
-  const { technologyName } = useParams()
+  const { destinationName , crewName ,  technologyName } = useParams()
   const location = useLocation()
+
   return (
     <div className="dek">
       <figure className="logo">
@@ -17,22 +16,22 @@ const HeaderDek = () => {
       <nav className='navdek'>
         <ul className='navdek__list'>
           <li>
-            <Link className={location.pathname === "/" && "active-desk"} to="/"><span>00</span>HOME</Link>
+            <Link className={location.pathname === "/" ? "active-desk" : ""} to="/"><span>00</span>HOME</Link>
           </li>
           <li>
             <Link
-              className={destinationName === destinationPathName && "active-desk"}
+              className={destinationName === destinationPathName ? "active-desk" : ""}
               to={`/destination/${destinationPathName}`} ><span>01</span>DESTINATION</Link>
           </li>
           <li>
             <Link
-              className={crewName === crewPathName && "active-desk"}
+              className={crewName === crewPathName ? "active-desk" : ""}
               to={`/crew/${crewPathName}`} ><span>02</span> CREW</Link>
           </li>
           <li>
 
             <Link
-              className={technologyName === technologyPathName && "active-desk"}
+              className={technologyName === technologyPathName ? "active-desk" : ""}
               to={`/technology/${technologyPathName}`} ><span>03</span>TECHNOLOGY</Link>
           </li>
         </ul>
