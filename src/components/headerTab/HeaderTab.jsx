@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./headerTab.scss";
 import logo from "../../../public/images/shared/logo.svg";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { AppContext } from "../../routes/Router";
 
 const HeaderTab = () => {
@@ -20,22 +20,22 @@ const HeaderTab = () => {
       <nav className='navtab'>
         <ul>
           <li>
-            <NavLink className={location.pathname === "/" && "active-tab"} to="/">HOME</NavLink>
+            <Link className={location.pathname === "/" && "active-tab"} to="/">HOME</Link>
           </li>
           <li>
-            <NavLink
+            <Link
               className={destinationName === destinationPathName && "active-tab"}
-              to={`/destination/${destinationPathName}`} >DESTINATION</NavLink>
+              to={`/destination/${destinationPathName}`} >DESTINATION</Link>
           </li>
           <li>
-            <NavLink
+            <Link
               className={crewName === crewPathName && "active-tab"}
-              to={`/crew/${crewPathName}`} >CREW</NavLink>
+              to={`/crew/${crewPathName}`} >CREW</Link>
           </li>
           <li>
-            <NavLink
+            <Link
               className={technologyName === technologyPathName && "active-tab"}
-              to={`/technology/${technologyPathName}`} >TECHNOLOGY</NavLink>
+              to={`/technology/${technologyPathName}`} >TECHNOLOGY</Link>
           </li>
         </ul>
       </nav>
