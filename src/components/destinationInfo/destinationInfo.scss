@@ -79,3 +79,38 @@
         }
     }
 }
+
+
+@media screen and (min-width: 1100px) {
+    .destination {
+        &__info-container {
+            max-width: 445px;
+        }
+
+        &__title {
+            font-size: 100px;
+        }
+
+        &__description {
+            padding: 0rem;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        &__separate-line {
+            margin: 54px 0rem 28px 0rem;
+        }
+
+        &__info {
+            justify-content: flex-start;
+            gap: 3rem;
+        }
+
+        &__distance,
+        &__travel {
+            &--title {
+                margin-bottom: 0.7rem;
+            }
+        }
+    }
+}

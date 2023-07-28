@@ -39,6 +39,7 @@
         text-align: center;
         align-items: center;
         gap: 0.5rem;
+        max-width: 445px;
     }
 
     &__nav {
@@ -64,6 +65,7 @@
 @media screen and (min-width: 768px) {
     .destination {
         &__subtitle {
+            padding: 3rem 1rem 2.5rem 1rem;
             text-align: left;
             margin-left: 38.5px;
             margin-bottom: 1.5rem;
@@ -79,7 +81,8 @@
 
         &__nav {
             &__list {
-                gap: 2rem;;
+                gap: 2rem;
+                ;
                 margin-bottom: 1.7rem;
 
                 &--item {
@@ -91,8 +94,41 @@
     }
 }
 
+@media screen and (min-width: 1100px) {
+    .destination {
+        &__subtitle {
+            margin-left: 167px;
+            letter-spacing: 4.725px;
+            font-size: 28px;
+        }
 
-.active-destination, .active {
+        &__content-container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            align-self: center;
+            gap: 5rem;
+
+        }
+
+        &__image {
+            width: auto;
+            height: auto;
+            margin-bottom: 3;
+        }
+
+        &__content {
+            text-align: left;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+    }
+}
+
+
+
+.active-destination {
     color: white;
     position: relative;
 

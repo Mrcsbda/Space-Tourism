@@ -11,7 +11,7 @@ import HeaderDek from "../headerDek/HeaderDek";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 480 });
-  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1200 });
+  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1099 });
 
   useEffect(() => {
     handleResize();
