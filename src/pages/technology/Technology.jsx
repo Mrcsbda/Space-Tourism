@@ -8,28 +8,29 @@ const Technology = () => {
   const navigate = useNavigate()
   const { technologyName } = useParams()
   const [technology, setTechnology] = useState({})
-  const {setTechnologyPathName} = useContext(AppContext)
-  const technologies = ["Launch vehicle", "Spaceport", "Space capsule", ]
+  const { setTechonologyPathName } = useContext(AppContext)
+  const technologies = 
+  ["Launch vehicle",
+   "Spaceport", 
+   "Space capsule", ]
 
   useEffect(() =>{
-    setTechnologyPathName(technologyName)
-    setTechnology(filterTechnology(technologyName))
+    setTechonologyPathName(technologyName)
+    setTechnology(filterTechnology(separePathName()))
     
   }, [technologyName])
   const separePathName = () => {
     return technologyName.replace('-', ' ')
   }
   const handleTechnology = (technology) => {
-    setTechnologyPathName(technology)
+    setTechonologyPathName(technology)
     navigate(`/technology/${technology.replace(' ', '-')}`)
 
   }
-  console.log(technology)
+  
   return (
     <>
-    <h1>
-    
-      </h1> 
+    {technology?.name&& (
         <section className='technology'>
           <h2 className='technology__subtitle'><span>03</span>SPACE LAUCH 101
           </h2>
@@ -37,23 +38,32 @@ const Technology = () => {
           <div className='technology__container'>
             <img
             className='technology__image'
-            src="/images/technology/image-launch-vehicle-landscape.jpg" alt="" />
+            src={technology.images.landscape} alt={technology.name} />
+            <img className='hidden'
+            src={technology.images.portrait} alt={technology.name} />
             <hr/>
-            <div className='technology__buttons'>
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-            </div>
+            
             <div className='technology__info'>
-            <TechnologyInfo />
+            <div className='technology__buttons'>
+              {technologies.map((item, index)=>(
+                <button key={index+1}
+                className={`${technology.name===item && "active-technology"}`}
+                onClick={()=> handleTechnology(item)}
+                >  
+                  {index+1}
+                </button>
+              ))}
+              
+            </div>
+            <TechnologyInfo technology={technology} />
             </div>
               
              
           </div>
         </section>
-     
+     )}
     </>
-  )
-}
+  );
+};
 
 export default Technology
