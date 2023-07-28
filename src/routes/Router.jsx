@@ -11,15 +11,22 @@ export const AppContext = createContext()
 
 const Router = () => {
     const [destinationPathName, setDestinationPathName] = useState("Moon")
+    const [crewPathName, setCrewPathName] = useState("Douglas-Hurley")
+    const [technologyPathName, setTechonologyPathName] = useState("Launch-vehicle")
+    const [inNavMobile, setInNavMobile] = useState(false)
 
-    
     return (
         <AppContext.Provider 
         value={
             {
                 destinationPathName,
                 setDestinationPathName,
-            
+                crewPathName,
+                setCrewPathName,
+                technologyPathName,
+                setTechonologyPathName,
+                inNavMobile,
+                setInNavMobile
             }
             
         }>
