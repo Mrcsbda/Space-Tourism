@@ -11,14 +11,21 @@ export const AppContext = createContext()
 
 const Router = () => {
     const [destinationPathName, setDestinationPathName] = useState("Moon")
+
     
     return (
-        <AppContext.Provider value={
+        <AppContext.Provider 
+        value={
             {
                 destinationPathName,
-                setDestinationPathName
+                setDestinationPathName,
+            
             }
+            
         }>
+
+
+
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Layout />} >

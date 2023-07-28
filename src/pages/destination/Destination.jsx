@@ -21,7 +21,7 @@ const Destination = () => {
     setDestinationPathName(destination)
     navigate(`/destination/${destination}`)
   }
-
+console.log(destination)
   return (
     <>
       {
