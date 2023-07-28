@@ -11,8 +11,8 @@ import HeaderDek from "../headerDek/HeaderDek";
 import { AppContext } from "../../routes/Router";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 480 });
-  const isTablet = useMediaQuery({ minWidth: 481, maxWidth: 1099 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1099 });
   const { inNavMobile , setInNavMobile } = useContext(AppContext)
 
   useEffect(() => {

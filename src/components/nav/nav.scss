@@ -12,6 +12,7 @@
   right: 0;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.774227142333984px);
+  z-index: 100;
 
   &__list {
     list-style: none;
@@ -53,5 +54,17 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .nav {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .nav {
+    width: 40%;
   }
 }
