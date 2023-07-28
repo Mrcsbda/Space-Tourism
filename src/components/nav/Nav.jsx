@@ -5,6 +5,7 @@ import './nav.scss'
 
 const Nav = ({ handleMenuToggle }) => {
     const { destinationPathName, crewPathName, technologyPathName } = useContext(AppContext)
+
     return (
         <nav className='nav'>
             <ul className='nav__list'>
@@ -30,7 +31,7 @@ const Nav = ({ handleMenuToggle }) => {
                 </li>
                 <li className='nav__item'>
                     <NavLink
-                        to={`/technology/${crewPathName}`}
+                        to={`/technology/${technologyPathName}`}
                         className='nav__item--nav-link'
                         onClick={handleMenuToggle}
                     ><span>04</span> TECHNOLOGY</NavLink>

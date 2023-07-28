@@ -1,46 +1,53 @@
 @import "/src/assets/styles/variables.scss";
+
 .tab {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  align-items: center;
+
   .logo img {
-    width: 40px;
-    height: 40px;
-    padding-top: 20px;
-    padding-left: 20px;
+    width: 48px;
+    height: 48px;
+    margin-left: 40px;
   }
+
   .navtab {
     display: flex;
+
     ul {
       list-style: none;
       display: flex;
-      background-color: $rich-black;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.774227142333984px);
       flex-direction: row;
       align-items: center;
       gap: 20px;
 
       li {
         text-align: right;
+        font-family: $barlow-condensed-font;
+
         a {
           text-decoration: none;
           color: #ffff;
           padding: 8px 16px;
           border-radius: 4px;
           position: relative;
-          &:hover {
-            &::after {
-              content: "";
-              position: absolute;
-              bottom: -22px; 
-              left: 50%;
-              width: 50%; 
-              height: 2px;
-              background-color: #ffffff; /* Color de la raya blanca */
-              transform: translateX(-50%);
-            }
-          }
         }
       }
     }
   }
+}
+
+.active-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: white;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -32px;
 }
