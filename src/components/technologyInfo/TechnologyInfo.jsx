@@ -8,7 +8,7 @@ const TechnologyInfo = ({technology}) => {
             THE TERMINOLOGY...</h4>
            <h1 className='technology-info__title'>{(technology.name).toUpperCase()}</h1>
            <p className='technology-info__description'>
-           {(technology.description).toUpperCase()}
+           {technology.description}
            </p>
         </div>
   )

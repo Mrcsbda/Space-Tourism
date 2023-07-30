@@ -5,25 +5,28 @@
   flex-direction: column;
   align-items: center;
   &__subtitle {
-    font-size: 16px;
-    font-family: $barlow-font;
-    color: white;
-    font-weight: 200;
-    margin-bottom: 0.5rem;
+    font-size: 14px;
+    font-family: $barlow-condensed-font;
+    color: $periwinkle;
+    font-weight: 400;
+    margin-bottom: 0.7rem;
+    letter-spacing: 2.362px;
   }
   &__title {
-    font-size: 30px;
-    font-family: $barlow-font;
+    font-size: 24px;
+    font-family: $bellefair-font;
     color: white;
     font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   &__description {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     color: $periwinkle;
     font-family: $barlow-font;
     font-weight: 400;
+    font-size: 15px;
     text-align: center;
+    line-height: 25px;
   }
 }
 
@@ -33,26 +36,22 @@
     align-items: center;
     &__subtitle {
       font-size: 16px;
-      font-family: $barlow-font;
-      color: white;
-      font-weight: 200;
-      margin-bottom: 0.5rem;
+      font-weight: 400;
+      letter-spacing: 2.7px;
+      margin-bottom: 1rem;
     }
     &__title {
-      font-size: 30px;
-      font-family: $barlow-font;
-      color: white;
+      font-size: 40px;
       font-weight: 400;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     &__description {
       padding: 0 1.5rem;
-      color: $periwinkle;
-      font-family: $barlow-font;
       font-weight: 400;
       text-align: center;
       margin-bottom: 30px;
-      width: 450px;
+      width: 420px;
+      line-height: 28px;
     }
   }
 }
@@ -61,16 +60,17 @@
   .technology-info {
     display: flex;
     align-items: flex-start;
+    width: 470px;
+    max-width: 470px;
+
+
     &__subtitle {
       font-size: 16px;
-      font-family: $barlow-font;
-      color: white;
-      font-weight: 200;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2.7px;
     }
     &__title {
-      font-size: 30px;
-      font-family: $barlow-font;
+      font-size: 56px;
       color: white;
       font-weight: 400;
       margin-bottom: 0.5rem;
@@ -78,13 +78,12 @@
     &__description {
       display: flex;
       align-items: flex-start;
-      color: $periwinkle;
-      font-family: $barlow-font;
       font-weight: 400;
-      margin-bottom: 0.5rem;
       text-align: start;
       margin: 0;
       padding: 0;
+      font-size: 18px;
+      line-height: 32px;
     }
   }
 }
