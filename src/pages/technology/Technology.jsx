@@ -9,15 +9,15 @@ const Technology = () => {
   const { technologyName } = useParams()
   const [technology, setTechnology] = useState({})
   const { setTechonologyPathName } = useContext(AppContext)
-  const technologies = 
+  const technologies =
   ["Launch vehicle",
-   "Spaceport", 
+   "Spaceport",
    "Space capsule", ]
 
   useEffect(() =>{
     setTechonologyPathName(technologyName)
     setTechnology(filterTechnology(separePathName()))
-    
+
   }, [technologyName])
   const separePathName = () => {
     return technologyName.replace('-', ' ')
@@ -27,7 +27,7 @@ const Technology = () => {
     navigate(`/technology/${technology.replace(' ', '-')}`)
 
   }
-  
+
   return (
     <>
     {technology?.name&& (
@@ -42,23 +42,23 @@ const Technology = () => {
             <img className='hidden'
             src={technology.images.portrait} alt={technology.name} />
             <hr/>
-            
+
             <div className='technology__info'>
             <div className='technology__buttons'>
               {technologies.map((item, index)=>(
                 <button key={index+1}
                 className={`${technology.name===item && "active-technology"}`}
                 onClick={()=> handleTechnology(item)}
-                >  
+                >
                   {index+1}
                 </button>
               ))}
-              
+
             </div>
             <TechnologyInfo technology={technology} />
             </div>
-              
-             
+
+
           </div>
         </section>
      )}

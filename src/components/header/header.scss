@@ -3,16 +3,23 @@
 .header {
   height: max-content;
   padding: 20px;
+
   &__up {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    .logo img {
-      width: 40px;
-      height: 40px;
+    .logo {
+      display: flex;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
     }
+
     .hamburger {
       .close {
         width: 24px;
@@ -20,6 +27,7 @@
         z-index: 2;
         z-index: 200;
       }
+
       .menu {
         width: 24px;
       }
