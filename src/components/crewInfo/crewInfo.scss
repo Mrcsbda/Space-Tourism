@@ -27,3 +27,22 @@
         text-align: center;
     }
 }
+
+@media screen and (min-width: 1100px){
+    .crew-info{
+        align-items: flex-start;
+
+        &__subtitle{
+            font-size: 25px;
+        }
+
+        &__title{
+            font-size: 45px;
+        }
+
+        &__description{
+            text-align: start;
+            font-size: large;
+        }
+    }  
+}

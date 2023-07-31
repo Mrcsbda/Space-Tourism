@@ -51,7 +51,7 @@ const Crew = () => {
                   {crews.map((item, index) => (
                     <li
                       key={index + 1}
-                      className={`${crewName === item && "active-crew"}`}
+                      className={`crew__nav__lis--item${crewName === item ? "active-crew" : "" }`}
                       onClick={() => handleCrew(item)}
                     ></li>
                   ))}
