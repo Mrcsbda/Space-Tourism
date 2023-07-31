@@ -20,7 +20,7 @@ const Crew = () => {
   useEffect(() => {
     setCrewPathName(crewName);
     setCrew(filterCrew(separePathName()));
-    
+
   }, [crewName]);
 
   const separePathName = () => {
@@ -37,7 +37,7 @@ const Crew = () => {
        {crew?.name && (
         <section className="crew">
           <h2 className="crew__subtitle">
-            <span>02</span>Meet your crew
+            <span>02</span>MEET YOUR CREW
           </h2>
           <div className="crew__container">
             <img
@@ -47,15 +47,15 @@ const Crew = () => {
             <hr />
             <div className="crew__info">
               <nav className="crew__nav">
-                <ul className="crew__nav__lis">
+
                   {crews.map((item, index) => (
-                    <li
+                    <div
                       key={index + 1}
-                      className={`crew__nav__lis--item${crewName === item ? "active-crew" : "" }`}
+                      className={`crew__nav--item ${crew.name === item ? "active-crew" : "" }`}
                       onClick={() => handleCrew(item)}
-                    ></li>
+                    ></div>
                   ))}
-                </ul>
+
               </nav>
               <CrewInfo crew={crew}/>
             </div>

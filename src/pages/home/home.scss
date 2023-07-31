@@ -99,6 +99,7 @@
         align-items: flex-end;
         justify-content: space-around;
         padding: 0;
+        padding-bottom: 2rem;
         gap: 50px;
 
 
@@ -129,10 +130,20 @@
             width: 242px;
             height: 242px;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+            border-radius: 50%;
 
             img {
                 width: 100%;
                 height: 100%;
+            }
+
+            &:hover {
+                outline: 30px solid rgba(88, 88, 88, 0.774);
+                content: "";
+                transition: all .3s ease;
+                cursor: pointer;
             }
         }
     }

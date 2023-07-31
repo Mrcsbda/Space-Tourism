@@ -216,7 +216,8 @@
 @media screen and (min-width: 1260px) {
   .technology {
     .hidden {
-      width: 515px;
+      width: 552px;
+      height: auto;
     }
   }
 }
@@ -224,8 +225,9 @@
 @media screen and (min-width: 1440px) {
   .technology {
 
-    &__subtitle {
-      margin: 3rem 0 0 15vw;
+
+    &__container {
+      gap: 60px;
     }
   }
 }
@@ -234,7 +236,7 @@
   .technology {
 
     &__subtitle {
-      margin: 3rem 0 0 27vw;
+      margin: 3rem 0 0 24vw;
     }
   }
 }

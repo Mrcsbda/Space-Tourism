@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import './home.scss';
+import { Link } from "react-router-dom";
+import { AppContext } from "../../routes/Router";
 
 const Home = () => {
+  const { destinationPathName } = useContext(AppContext)
   return (
     <section className="home">
       <div className="home__container">
@@ -14,9 +17,11 @@ const Home = () => {
           experience!
         </p>
       </div>
-      <figure className="home__figure">
-        <img src="images/group.png" />
-      </figure>
+      <Link to={`/destination/${destinationPathName}`}>
+        <figure className="home__figure">
+          <img src="images/group.png" />
+        </figure>
+      </Link>
     </section>
   );
 };
