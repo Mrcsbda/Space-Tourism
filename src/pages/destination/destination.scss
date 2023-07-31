@@ -123,20 +123,39 @@
             gap: 0.5rem;
             max-width: 450px;
         }
+
+        &__nav {
+            &__list {
+                &--item {
+                    &:hover {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            height: 2px;
+                            position: absolute;
+                            bottom: -12px;
+                            background-color: white;
+                            opacity: 50%;
+                        }
+                    }
+                }
+            }
+        }
     }
-}
 
 
-.active-destination {
-    color: white;
-    position: relative;
+    .active-destination {
+        color: white;
+        position: relative;
 
-    &::before {
-        content: "";
-        width: 100%;
-        height: 2px;
-        position: absolute;
-        bottom: -12px;
-        background-color: white;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -12px;
+            background-color: white;
+        }
     }
 }
