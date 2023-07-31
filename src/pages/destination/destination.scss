@@ -39,7 +39,7 @@
         text-align: center;
         align-items: center;
         gap: 0.5rem;
-        max-width: 450px;
+
     }
 
     &__nav {
@@ -121,6 +121,7 @@
             text-align: left;
             align-items: flex-start;
             gap: 0.5rem;
+            max-width: 450px;
         }
     }
 }
