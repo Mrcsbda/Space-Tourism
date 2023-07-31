@@ -31,7 +31,6 @@
         hr {
             width: 100%;
             border: 1px solid #383B4B;
-            margin: 0 1.5rem 1.5rem 1.5rem;
         }
     }
 
@@ -42,22 +41,15 @@
 
     &__info {
         padding-top: 20px;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__nav {
-        display: flex;
         &__list {
-            gap: 8px;
-            display: inline-block;
-            max-width: 100px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            display: flex;
+            cursor: pointer;
         }
     }
-}
-
-.active-crew {
-    font-weight: bold;
 }

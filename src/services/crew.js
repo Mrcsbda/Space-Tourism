@@ -37,6 +37,6 @@ export const crew = [
     }
   ]
 
-  export const filterCrew = (crew) => {
-    return crew.find(element => element.name === crew);
+  export const filterCrew = (crewName) => {
+    return crew.find(element => element.name === crewName);
   }
