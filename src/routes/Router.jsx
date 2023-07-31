@@ -16,7 +16,8 @@ const Router = () => {
     const [inNavMobile, setInNavMobile] = useState(false)
 
     return (
-        <AppContext.Provider value={
+        <AppContext.Provider 
+        value={
             {
                 destinationPathName,
                 setDestinationPathName,
@@ -27,7 +28,11 @@ const Router = () => {
                 inNavMobile,
                 setInNavMobile
             }
+            
         }>
+
+
+
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Layout />} >

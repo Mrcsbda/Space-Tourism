@@ -21,7 +21,7 @@ const Destination = () => {
     setDestinationPathName(destination)
     navigate(`/destination/${destination}`)
   }
-
+console.log(destination)
   return (
     <>
       {
@@ -36,7 +36,7 @@ const Destination = () => {
                     {
                       destinations.map((element, index) => (
                         <li
-                        className={`destination__nav__list--item ${destinationName === element && "active-destination"}`}
+                        className={`destination__nav__list--item ${destinationName === element ? "active-destination" : ""}`}
                         key={index + 1}
                         onClick={()=> handleDestination(element)}
                         >{element}</li>

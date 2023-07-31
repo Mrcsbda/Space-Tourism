@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Header from '../../components/header/header'
+import Header from '../../components/header/Header'
 import { Outlet, useLocation } from 'react-router-dom'
 import "./layout.scss"
 import { AppContext } from '../../routes/Router'
@@ -32,7 +32,7 @@ const Layout = () => {
     }
 
     return (
-        <article className={`layout ${styleBackground} ${inNavMobile && "fixed"}`}>
+        <article className={`layout ${styleBackground} ${inNavMobile ? "fixed" : ""}`}>
             <Header />
             <Outlet />
         </article>
