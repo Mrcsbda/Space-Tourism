@@ -37,6 +37,7 @@
 
     &__image {
         height: 60vw;
+        max-height: 300px;
         width: auto;
     }
 
@@ -90,7 +91,8 @@
         &__image{
             position: absolute;
             bottom: 0;
-            height: 330px;
+            height: 320px;
+            max-height: 320px;
             width: auto;
         }
     }
@@ -98,9 +100,13 @@
 
 @media screen and (min-width: 1100px){
     .crew {
+        align-items: flex-start;
+        padding-left: 10vw;
+
         &__subtitle{
-            font-size: 25px;
-            padding: 0 13%;
+            font-size: 28px;
+            padding: 4rem 0 5rem 0;
+            width: max-content;
         }
         &__container{
             display: flex;
@@ -115,18 +121,33 @@
         }
 
         &__image{
-            position: relative;
-            height: 532px;
+            position: absolute;
+            bottom: 0;
+            right: 5vw;
+            height: 454px;
+            max-height: 454px;
             width: auto;
         }
 
         &__nav{
-            align-items: flex-start;
-            padding: 100px 0 0 0;
+            justify-content: flex-start;
 
             &__lis{
                 align-items: flex-start;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .crew {
+        &__image{
+            position: absolute;
+            bottom: 0;
+            right: 5vw;
+            height: 480px;
+            max-height: 480px;
+            width: auto;
         }
     }
 }

@@ -51,16 +51,21 @@
         align-items: flex-start;
 
         &__subtitle{
-            font-size: 25px;
+            font-size: 32px;
         }
 
         &__title{
-            font-size: 45px;
+            font-size: 56px;
         }
 
         &__description{
+            font-size: 18px;
             text-align: start;
             font-size: large;
+            line-height: 32px;
+            max-width: 444px;
+            width: 444px;
+            height: 160px;
         }
     }
 }
