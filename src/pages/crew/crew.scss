@@ -1,0 +1,131 @@
+@import '../../assets/styles/variables.scss';
+
+.crew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__subtitle {
+        text-align: center;
+        font-family: $barlow-condensed-font;
+        padding: 1rem;
+        font-size: 16px;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        letter-spacing: 2.7px;
+
+        span {
+            opacity: 25%;
+            font-weight: 700;
+            margin-right: 0.3rem;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        hr {
+            width: 100%;
+            border: 1px solid #383B4B;
+        }
+    }
+
+    &__image {
+        height: 223px;
+        width: auto;
+    }
+
+    &__info {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        &__lis {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            &--item {
+                font-size: 30px;
+                color: $periwinkle;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    .crew {
+        align-items: flex-start;
+        &__subtitle{
+            align-items: flex-start;
+        }
+
+        &__container{
+            flex-direction: column-reverse;
+
+            hr{
+                display: none;
+            }
+        }
+
+        &__info{
+            flex-direction: column-reverse;
+            padding: 0 100px;
+        }
+
+        &__image{
+            position: absolute;
+            bottom: 0;
+            height: 265px;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .crew {
+        &__subtitle{
+            font-size: 25px;
+            padding: 0 13%;
+        }
+        &__container{
+            display: flex;
+            flex-direction: row-reverse !important;
+            justify-content: space-around;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        &__info{
+            flex-grow: 1;
+        }
+         
+        &__image{
+            position: relative;
+            height: 532px;
+            width: auto;
+        }
+
+        &__nav{
+            align-items: flex-start;
+            padding: 100px 0 0 0;
+
+            &__lis{
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+.active-crew .crew__nav__lis--item{
+    color: white;
+}
